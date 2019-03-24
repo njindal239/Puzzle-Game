@@ -1,0 +1,89 @@
+/* 
+    Created By: Nipun Jindal
+    Student Number: 301325265
+*/
+body {
+     background: #d8bfd8;
+     margin: 0px;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: #4682b4;
+    margin-top: 0px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+#navigation {
+    background: #000055;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 30px;
+}
+
+nav li {
+    display: inline;
+    transition: all .5s ease-in-out;
+}
+
+nav li button {
+    background: #000055;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding-right: 50px;
+    border: none;
+    font-size: 16px;
+}
+
+#puzzleSolved {
+    text-align: center;
+}
+
+table {
+    margin: auto;
+}
+
+.nullElement {
+    height: 50px;
+    width: 50px;
+    background: #ff6666;
+}
+
+.columnHeadings {
+    width: 20px;
+    height: 50px;
+    background: #ff6666;
+    font-size: 10px;
+    text-align: center;
+}
+
+.rowHeadings {
+    width: 50px;
+    height: 20px;
+    background: #ff6666;
+    text-align: center;
+    font-size: 10px;
+}
+
+.cell {
+    width: 20px;
+    height: 20px;
+    background: #ff8080;
+    text-align: center;
+}
+
+.clicked {
+    background: #ff1a1a;
+}
+
+/* To make responsive to mobile screens */
+@media only screen and (max-width: 480px) {
+    nav li {
+        display: block;
+        text-align: center;
+    }
+}

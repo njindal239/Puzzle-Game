@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+
+<!--
+    Created By: Nipun Jindal
+    Student Number: 301325265
+-->
+
+<html>
+    <head>
+        <title>Puzzle Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" href = "./puzzle.css"> 
+    </head>
+    <body>
+        <header>
+            <h2> THE GREAT PUZZLE </h2>
+        </header>
+        
+        <div id = "navigation">
+            <nav>
+                <ul>
+                    <li> <button> <strong id = "reset"> NEW GAME </strong></button> </li>
+                    <li> <button> <strong id = "showAnswer"> SHOW ANSWER </strong> </button> </li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div>
+            <!-- It shall display congratulations when puzzle solved -->
+            <h1 id = "puzzleSolved">  </h1>     
+        </div>
+        
+        
+        <div>
+            <table>
+                <tr>
+                    <td class = "nullElement"> </td>
+                    <td class = "columnHeadings"> 5 </td>
+                    <td class = "columnHeadings"> 5 <br> 4 </td>
+                    <td class = "columnHeadings"> 6 <br> 4 </td>
+                    <td class = "columnHeadings"> 6 <br> 5 </td>
+                    <td class = "columnHeadings"> 5 <br> 5 </td>
+                    <td class = "columnHeadings"> 5 <br> 4 </td>
+                    <td class = "columnHeadings"> 8 </td>
+                    <td class = "columnHeadings"> 8 <br> 4 </td>
+                    <td class = "columnHeadings"> 4 <br> 1 <br> 2 <br> 1 </td>
+                    <td class = "columnHeadings"> 4 <br> 2 <br> 2 <br> 1 </td>
+                    <td class = "columnHeadings"> 8 <br> 2 <br> 1 </td>
+                    <td class = "columnHeadings"> 9 <br> 3 </td>
+                    <td class = "columnHeadings"> 9 <br> 3 </td>
+                    <td class = "columnHeadings"> 3 <br> 2 </td>
+                    <td class = "columnHeadings"> 1 <br> 2 </td> 
+                </tr>
+                <tr>
+                    <td class = "rowHeadings"> 6  2 </td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+
+                </tr>
+
+                <tr>
+                    <td class = "rowHeadings"> 12 </td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+
+                </tr>
+                
+                <tr>
+                    <td class = "rowHeadings"> 13 </td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+
+                </tr>
+                
+                <tr>
+                    <td class = "rowHeadings"> 12 </td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+
+                </tr>
+                
+                <tr>
+                    <td class = "rowHeadings"> 6  4 </td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+
+                </tr>
+                
+                <tr>
+                    <td class = "rowHeadings"> 4  2  3 </td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+
+                </tr>
+                
+                <tr>
+                    <td class = "rowHeadings"> 3  3  3 </td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+
+                </tr>
+                
+                <tr>
+                    <td class = "rowHeadings"> 2  4  4 </td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+
+                </tr>
+                
+                <tr>
+                    <td class = "rowHeadings"> 2  2  4 </td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+
+                </tr>
+                
+                <tr>
+                    <td class = "rowHeadings"> 3  2 </td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+
+                </tr>
+                
+                <tr>
+                    <td class = "rowHeadings"> 4  3 </td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+
+                </tr>
+                
+                <tr>
+                    <td class = "rowHeadings"> 4  8 </td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+
+                </tr>
+                
+                <tr>
+                    <td class = "rowHeadings"> 3  1  4 </td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+
+                </tr>
+                
+                <tr>
+                    <td class = "rowHeadings"> 1  1  6 </td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+
+                </tr>
+                
+                <tr>
+                    <td class = "rowHeadings"> 1  1  1 </td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+                    <td class="cell"></td>
+
+                </tr>
+            </table>
+        </div>
+       
+        
+        <script src = "puzzle.js"></script>
+
+    </body>
+</html>
